@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #efefef;
+  color: #434344;
+}
+body {
+  font-family: sans-serif;
+  margin: 3rem;
+  background-color: #dfdfdf;
+  background-color: #800040; /*maybe for buttons*/
+  background-color: #9c1458; /*ybe for hovering*/
+  background-color: transparent;
+  color: #800040;
+  background-color: #f8dae9;/*overing*/
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.75);
+  background-color: #3f3f3f;
+  color :red;
+  background: #262a2b;
+  background: #ff1b68; /*redish*/
+  color: #2ddf5c /*green*/
+  background: #d5ffdc; /*nice green*/
+  background: #19b84c; /*green */
+}
+
+h1, h2 {
+  color: #333333;
+  color: #0e4f1f; /*dark ren*/
+}
+/*div*/
+.modal {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 30rem;
+  z-index: 10;
+  position: fixed;
+  top: 20vh;
+  left: calc(50% - 15rem);
+}
+/*div*/
+.backdrop {
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.btn--alt {
+  background-color: transparent;
+  color: #800040;
+}
