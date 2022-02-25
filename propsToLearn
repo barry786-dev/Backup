@@ -1,0 +1,16 @@
+DOM Traversal
+Check out the MDN articles on
+Element.matches()
+Element.closest()
+Element.children
+Node.parentNode
+Element.previousElementSibling
+Node.previousSibling 
+Element.nextElementSibling
+Node.nextSibling
+Node.firstChild
+Element.firstElementChild
+Node.lastChild 
+
+check out Element.nodeName
+https://developer.mozilla.org/en-US/docs/Web/API/Element/classList

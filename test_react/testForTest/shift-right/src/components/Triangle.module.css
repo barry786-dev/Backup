@@ -1,0 +1,12 @@
+.div {
+  position: absolute;
+  top: 35vh;
+  left : 0px;
+  z-index: 10;
+  width: 0;
+  height: 0;
+  border-bottom: cadetblue solid 50px;
+  border-top: transparent solid 50px;
+  border-right: transparent solid 50px;
+  border-left: transparent solid 50px;
+}

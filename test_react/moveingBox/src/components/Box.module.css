@@ -1,0 +1,6 @@
+.div {
+  position: absolute;
+  left : 42vw;
+  z-index: 10;
+  border: #dc6e4b solid 50px;
+}

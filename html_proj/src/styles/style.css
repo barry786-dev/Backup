@@ -1,0 +1,441 @@
+@font-face {
+  font-family: Monoton;
+  src: url(../fonts/Monoton-Regular.ttf);
+}
+@font-face {
+  font-family: WindSong;
+  src: url(../fonts/WindSong-Medium.ttf);
+}
+@font-face {
+  font-family: Hahmlet;
+  src: url(../fonts/Hahmlet-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "Fjalla One";
+  src: url(../fonts/FjallaOne-Regular.ttf);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+/* classes to draw a moving line over the a link*/
+.line-over-decoration::before {
+  content: "";
+  display: block;
+  height: 4px;
+  background: #ff0000;
+  position: relative;
+  top: -0.3em;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 250ms;
+}
+
+.line-over-decoration:hover::before {
+  transform: scale(1, 1);
+}
+
+.line-over-decoration.active:hover:before {
+  transform: scale(0, 0);
+}
+
+/* end of classes to draw a moving line over the a link*/
+@media (max-width: 1115px) {
+  .logo-part {
+    justify-content: center;
+  }
+
+  .line-over-decoration::before {
+    display: none;
+  }
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f8ff;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  /* display: flex;
+  align-items: center; */
+  width: 100%;
+}
+header .bjj-sale {
+  position: fixed;
+  top: 0;
+  height: 2em;
+  background-color: #ff0000;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 200;
+  text-align: center;
+  padding-top: 0.3em;
+  z-index: 999;
+}
+header .Socialmedia {
+  position: fixed;
+  width: 100%;
+  top: 2em;
+  display: flex;
+  font-size: 2rem;
+  background-color: #f8f8ff;
+  height: 4em;
+  align-items: center;
+  z-index: 990;
+}
+header .Socialmedia a {
+  text-decoration: none;
+  padding: 0.3em;
+  color: black;
+  font-family: Hahmlet;
+  padding-left: 1em;
+}
+header .Socialmedia a:hover {
+  color: #ff0000;
+}
+header .Socialmedia .header-contact {
+  flex-grow: 1;
+}
+
+.logo-part {
+  position: relative;
+  top: 6em;
+  width: 100%;
+  height: 15vh;
+  min-height: 100px;
+  background-color: #ff0000;
+  opacity: 0.9;
+  display: flex;
+}
+.logo-part .logo-image {
+  padding: 2em;
+  width: 500px;
+  height: auto;
+  max-width: 80vw;
+}
+
+/* Navigation Styling */
+.main-nav.sticky {
+  position: fixed;
+  top: 7.5em;
+  width: 100%;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-wrapper {
+  width: 100%;
+  height: 3em;
+  background: black;
+}
+
+.nav-toggle-label {
+  margin-left: 1em;
+  display: inline-flex;
+  height: 100%;
+  align-items: center;
+}
+.nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 3em;
+  border-radius: 2px;
+  position: relative;
+}
+.nav-toggle-label span::before, .nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+.nav-toggle-label span::before {
+  bottom: 9px;
+}
+.nav-toggle-label span::after {
+  top: 9px;
+}
+.nav-toggle-label span:hover, .nav-toggle-label span:hover::before, .nav-toggle-label span:hover::after {
+  background: #ff0000;
+  cursor: pointer;
+}
+
+.main-nav {
+  position: relative;
+  top: 6em;
+  height: 0;
+}
+.main-nav ul {
+  background: black;
+  text-align: left;
+  z-index: 900;
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 10ms ease-in-out;
+  list-style: none;
+}
+.main-nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+.main-nav a {
+  color: #f8f8ff;
+  text-decoration: none;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+.main-nav a:hover {
+  color: #ff0000;
+}
+.main-nav .sub-nav a {
+  cursor: default;
+}
+.main-nav .sub-nav .accordion-title icon {
+  float: right;
+}
+.main-nav .sub-nav .accordion-title icon::before {
+  content: "";
+  height: 20px;
+  width: 2px;
+  background-color: white;
+  position: relative;
+  top: 0;
+  left: 11px;
+  display: inline-block;
+}
+.main-nav .sub-nav .accordion-title icon::after {
+  content: "";
+  height: 2px;
+  width: 20px;
+  background-color: white;
+  position: relative;
+  top: -9px;
+  left: 0px;
+  display: inline-block;
+  transform: rotate(0);
+  transition: ease all 0.6s;
+}
+.main-nav .sub-nav .sub-nav-content a {
+  cursor: pointer;
+}
+.main-nav .sub-nav .sub-nav-content {
+  display: none;
+  /*hiding the sub nav if it not hovered*/
+}
+.main-nav .sub-nav:hover .sub-nav-content {
+  display: block;
+  /*make sub-nav appear when hovering*/
+  animation: fade_in_show 250ms ease-in-out both;
+}
+.main-nav .active {
+  /*style the menu item of the active page - see the .active @media bellow too*/
+  cursor: default;
+  color: #ff0000;
+}
+
+@keyframes fade_in_show {
+  0% {
+    opacity: 0;
+    transform: scale(1, 0);
+    transform-origin: top;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+    transform-origin: top;
+  }
+}
+.nav-toggle:checked ~ .main-nav ul {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ .main-nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 50ms;
+}
+
+@media screen and (min-width: 1115px) {
+  /*styling the nav for desktop*/
+  .nav-toggle-wrapper {
+    display: none;
+  }
+
+  .main-nav ul {
+    transform: scale(1, 1);
+    display: flex;
+    align-items: center;
+  }
+  .main-nav ul a {
+    opacity: 1;
+    position: relative;
+  }
+  .main-nav ul li {
+    margin-bottom: unset;
+    padding: 1em;
+  }
+  .main-nav ul .sub-nav {
+    position: relative;
+  }
+  .main-nav ul .sub-nav .sub-nav-content {
+    position: absolute;
+    left: 0;
+    background: black;
+  }
+}
+/* @media (max-width: 2000px) {
+  html {
+    font-size: 0.7vw;
+    filter: brightness(80%);
+  }
+  .indexmain {
+    font-size: 0.85rem;
+    margin: 30rem 5rem 1rem 5rem;
+  }
+  header #Samurai {
+    margin: 0em 0em 1em 65em;
+  }
+}
+@media (max-width: 1300px) {
+  html {
+    font-size: 1vw;
+    filter: brightness(85%);
+  }
+  .indexmain {
+    font-size: 0.85rem;
+    margin: 32rem 5rem 1rem 5rem;
+  }
+  header #Samurai {
+    margin: 0em 0em 1em 57em;
+  }
+}
+@media (max-width: 700px) {
+  html {
+    font-size: 1.3vw;
+    filter: brightness(90%);
+  }
+  .indexmain {
+    font-size: 0.85rem;
+    margin: 38rem 5rem 1rem 5rem;
+  }
+  header #Samurai {
+    margin: 0em 0em 1em 23em;
+  }
+} */
+/* #logo-video {
+  position: fixed;
+  object-fit: cover;
+  right: 0;
+  bottom: 0;
+  min-width: 100vw; 
+  min-height: 100vh;
+
+} */
+/* position: absolute;
+  top: 50%; 
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 100%; 
+  min-height: 100%; 
+  width: auto; 
+  height: auto;
+  z-index: -1000; 
+  overflow: hidden; */
+/* .logo-video-content {
+  position: fixed;
+  text-align: center;
+  color: black;
+  width: 100%;
+}
+.logo-video-content h1 {
+  font-family: Monoton;
+  font-weight: 400;
+  font-size: 3vw;
+}
+.logo-video-content p {
+  font-family: Hahmlet, serif;
+  font-weight: 400;
+  margin: 0;
+  font-size: 2vw;
+  line-height: 3em;
+}
+.logo-video-content p em {
+  font-family: WindSong, cursive;
+  font-weight: 400;
+  font-size: 2em;
+  padding: 1em;
+} */
+/* 
+@media (max-width: 2000px) {
+  html {
+    font-size: 0.7vw;
+    filter: brightness(80%);
+  }
+
+  .indexmain {
+    font-size: 0.85rem;
+    margin: 30rem 5rem 1rem 5rem;
+  }
+
+  header #Samurai {
+    margin: 0em 0em 1em 65em;
+  }
+}
+@media (max-width: 1300px) {
+  html {
+    font-size: 1vw;
+    filter: brightness(85%);
+  }
+
+  .indexmain {
+    font-size: 0.85rem;
+    margin: 32rem 5rem 1rem 5rem;
+  }
+
+  header #Samurai {
+    margin: 0em 0em 1em 57em;
+  }
+}
+@media (max-width: 700px) {
+  html {
+    font-size: 1.3vw;
+    filter: brightness(90%);
+  }
+
+  .indexmain {
+    font-size: 0.85rem;
+    margin: 38rem 5rem 1rem 5rem;
+  }
+
+  header #Samurai {
+    margin: 0em 0em 1em 23em;
+  }
+}
+h1,
+p {
+  text-align: center;
+  color: red;
+}
+
+img {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+} */
+
+/*# sourceMappingURL=style.css.map */
