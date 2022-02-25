@@ -1,0 +1,38 @@
+[
+  {
+    "firstName": "mohamed",
+    "lastName": "barry",
+    "Age": "54",
+    "Grades": "98"
+  },
+  {
+    "firstName": "maher",
+    "lastName": "lamadani",
+    "Age": "48",
+    "Grades": "92"
+  },
+  {
+    "firstName": "hani",
+    "lastName": "rome",
+    "Age": "55",
+    "Grades": "92"
+  },
+  {
+    "firstName": "rami",
+    "lastName": "dci",
+    "Age": "35",
+    "Grades": "92"
+  },
+  {
+    "firstName": "abden",
+    "lastName": "hani",
+    "Age": "41",
+    "Grades": "98"
+  },
+  {
+    "firstName": "Samer",
+    "lastName": "Lamadani",
+    "Age": "22",
+    "Grades": "80"
+  }
+]
