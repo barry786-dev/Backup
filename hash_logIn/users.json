@@ -1,0 +1,18 @@
+[
+  {
+    "userName": "Mohamed",
+    "hashedPass": "$2b$10$MJ9qLS4MmBb/cRf7weSkbe9FIOpP1fuqDWV9hBLkRXx9uZlTSFCRy"
+  },
+  {
+    "userName": "maher",
+    "hashedPass": "$2b$10$7/8jx/BOJdAr.A1T50G/AusF4lDg0jlDkNl3wzJBbV3xmALCoqqWK"
+  },
+  {
+    "userName": "hani",
+    "hashedPass": "$2b$10$L5326BUq5Q35xtXZ1TyxtOsohtuNzDaCdscVKvA5aZo7lfrRcmbkO"
+  },
+  {
+    "userName": "hadi",
+    "hashedPass": "$2b$10$8pA9msqqlYaVIhvIbnsr4ukvLBVFG7S2pvriaGu3yRcEWcYEa9Vj2"
+  }
+]

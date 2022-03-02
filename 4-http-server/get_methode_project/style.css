@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.product {
+  border: solid 1px red;
+  padding: 2%;
+}
+.backgroundcolor {
+  background-color: aquamarine;
+}
