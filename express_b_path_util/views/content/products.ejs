@@ -1,0 +1,42 @@
+<h1 class="display-4 text-center">Products Page</h1>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/products" , methode="GET">
+      <div class="form-control">
+        <label for="category">Selec Category</label>
+        <select class="form-select" name="category" id="">
+          <option value="all">All Ctegory</option>
+          <% categories.forEach(category=>{%>
+          <option value="<%= category%>"><%= category%></option>
+          <%})%>
+        </select>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- Display all products -->
+
+<!-- repeat this div -->
+<%let counter=0%>
+<% data.forEach((product, index)=>{%> <% if(index%3 == 0){ %>
+<div class="row">
+  <%}%>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header bg-dark"><%= product.name%></div>
+      <div class="card-body text-dark">
+        <blockquote class="blockquote mb-0">
+          <img src="<%= product.logo%>" alt="" class="product-logo" />
+          <p>Name : <%= product.name%></p>
+          <p>Version: <%= product.vesrion%></p>
+          <p>Author: <%= product.author%></p>
+          <a href="#" class="btn btn-success">Read more</a>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+  <%counter++%>
+  <% if(counter%3 == 0){ %>
+</div>
+<%}%> <%})%>
