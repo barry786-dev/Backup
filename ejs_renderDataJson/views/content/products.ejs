@@ -1,0 +1,42 @@
+<h1 class="display-4 text-center"><%= title%></h1>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/products" method="GET">
+      <div class="form-control">
+        <label for="category">Select Category</label>
+        <select class="form-select" name="category" id="" onchange="this.form.submit()">
+          <option value="all">All Category</option>
+          <% categories.forEach(category => { %>
+          <option value="<%= category%>" <%= selected_item?selected_item===category?'selected':'':''%>><%= category%>
+          </option>
+          <% }) %>
+        </select>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Display all products -->
+<% data.forEach((product,index) => { %>
+<% if(index%3 == 0 && index>0){ %>
+</div>
+<%}%>
+   <% if (index==0 || index%3 == 0) { %>
+<div class="row">
+  <% } %>
+  <div class="col-md-4 mt-3">
+    <div class="card">
+      <div class="card-header bg-dark"><%= product.name%></div>
+      <div class="card-body text-dark">
+        <blockquote class="blockquote mb-0">
+          <img src="<%= product.logo%>" alt="" class="product-logo">
+          <p>Name: <%= product.name%></p>
+          <p>Version: <%= product.version%></p>
+          <p>Author: <%= product.author%></p>
+          <a href="#" class="btn btn-success">Read More</a>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+  <% }) %>
