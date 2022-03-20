@@ -1,0 +1,21 @@
+
+00:54:58	Mostafa-Ubuntu:	https://docs.mongodb.com/mongodb-shell/
+
+01:09:02	Mostafa-Ubuntu:	https://docs.mongodb.com/mongodb-shell/run-commands/
+
+01:09:40	Rami:	sudo rm -rf /tmp/mongodb-27017.sock
+
+01:10:21	Mostafa-Ubuntu:	sudo systemctl enable mongod
+
+01:10:28	Mostafa-Ubuntu:	sudo systemctl daemon-reload
+
+01:21:03	Salim Barry:	mongoimport --jsonArray --db=E05 --collection=product products.json
+
+01:33:06	Piet Lingoda:	{'value': NumberInt(0)}
+
+05:40:18	Salim Barry:	https://mongoosejs.com/docs/api.html#model_Model.bulkWrite
+
+06:33:43	Salim Barry:	https://stackoverflow.com/questions/43962430/mongoose-how-to-prevent-mongodb-to-save-duplicate-email-records-in-database
+
+06:35:01	Salim Barry:	npm install --save mongoose-unique-validator
+ email: { type: String, required: true, unique: true},

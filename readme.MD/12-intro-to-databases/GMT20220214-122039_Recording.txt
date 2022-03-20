@@ -1,0 +1,17 @@
+05:03:50	Mostafa-Ubuntu:	https://docs.mongodb.com/manual/tutorial/getting-started/
+
+
+sudo systemctl start mongod
+sudo systemctl daemon-reload
+sudo systemctl status mongod
+sudo systemctl enable mongod
+sudo systemctl stop mongod
+sudo systemctl restart mongod
+
+
+05:32:19	Rami:	sudo rm -rf /tmp/mongodb-27017.sock
+05:32:36	Rami:	sudo service mongod start
+
+05:49:50	Mostafa-Ubuntu:	https://www.mongodb.com/products/compass
+05:54:44	Mostafa-Ubuntu:	https://www.how2shout.com/linux/install-mongodb-compass-gui-in-ubuntu-20-04-lts-linux/
+05:56:41	Mostafa-Ubuntu:	https://docs.mongodb.com/compass/current/install/
