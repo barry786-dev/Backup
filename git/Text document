@@ -1,0 +1,7 @@
+git config --global core.editor "code --wait"
+git add (file name)
+git diff (file name)
+git add -p (file name)
+git commit -a -m $'Commit title\n\nRest of commit message...'
+git commit -m "Title" -m "Description ..........";
+git log

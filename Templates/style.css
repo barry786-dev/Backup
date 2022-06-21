@@ -64,3 +64,16 @@ h1, h2 {
   background-color: transparent;
   color: #800040;
 }
+.flex{
+  display: flex;
+  justify-content: center; /*flex-start(default) , flex-end ,center, space-between, space-around,space-evenly*/
+  align-items: center; /*flex-start , flex-end ,center, baseline, stretch(default)*/
+  flex-direction: row; /*row(default) , column , reverse*/
+  flex-wrap: nowrap; /*nowrap(default) , wrap , wrap-reverse*/
+  align-content: center; /*flex-start, flex-end ,center, space-between, space-around,space-evenly ,stretch(default)*/
+}
+.flex_item {
+  order: 1;
+  flex: 1;
+  align-self: auto;/*auto(default) , flex-start, flex-end, center, baseline, stretch*/
+}
